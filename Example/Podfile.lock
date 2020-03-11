@@ -1,15 +1,22 @@
 PODS:
-  - ZHKUIKit (0.1.0)
+  - Masonry (1.1.0)
+  - ZHKUIKit (0.1.0):
+    - Masonry
 
 DEPENDENCIES:
   - ZHKUIKit (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Masonry
 
 EXTERNAL SOURCES:
   ZHKUIKit:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ZHKUIKit: fdad52dc386dedf32505c7c696ceaf9aff8d1e77
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  ZHKUIKit: c3db80888079a6978e487eae32398a96b42da3ec
 
 PODFILE CHECKSUM: 73e3c152d40b99f10bae809e83123f633b18f2bc
 
