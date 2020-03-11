@@ -1,0 +1,16 @@
+PODS:
+  - ZHKUIKit (0.1.0)
+
+DEPENDENCIES:
+  - ZHKUIKit (from `../`)
+
+EXTERNAL SOURCES:
+  ZHKUIKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ZHKUIKit: fdad52dc386dedf32505c7c696ceaf9aff8d1e77
+
+PODFILE CHECKSUM: 73e3c152d40b99f10bae809e83123f633b18f2bc
+
+COCOAPODS: 1.9.0.beta.2
