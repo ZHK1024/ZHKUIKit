@@ -1,6 +1,6 @@
 # ZHKUIKit
 
-[![CI Status](https://img.shields.io/travis/TongJunfeng/ZHKUIKit.svg?style=flat)](https://travis-ci.org/TongJunfeng/ZHKUIKit)
+[![CI Status](https://img.shields.io/travis/TongJunfeng/ZHKUIKit.svg?style=flat)](https://travis-ci.org/ZHK1024/ZHKUIKit)
 [![Version](https://img.shields.io/cocoapods/v/ZHKUIKit.svg?style=flat)](https://cocoapods.org/pods/ZHKUIKit)
 [![License](https://img.shields.io/cocoapods/l/ZHKUIKit.svg?style=flat)](https://cocoapods.org/pods/ZHKUIKit)
 [![Platform](https://img.shields.io/cocoapods/p/ZHKUIKit.svg?style=flat)](https://cocoapods.org/pods/ZHKUIKit)
@@ -17,12 +17,12 @@ ZHKUIKit is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'ZHKUIKit'
+pod 'ZHKUIKit', :git => 'https://github.com/ZHK1024/ZHKUIKit'
 ```
 
 ## Author
 
-TongJunfeng, 389914070@qq.com
+ZHK1024, ZHK1024@foxmail.com
 
 ## License
 
