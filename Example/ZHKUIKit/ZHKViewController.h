@@ -8,6 +8,6 @@
 
 @import UIKit;
 
-@interface ZHKViewController : UIViewController
+@interface ZHKViewController : UITableViewController
 
 @end
