@@ -40,15 +40,15 @@ NSString *const UIChangeAvatarCell_IDFR = @"UIChangeAvatarCell";
     [self.contentView addSubview:self.avatarView];
     
     [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(15.0f);
+        make.left.mas_equalTo(self.contentInset.left);
         make.centerY.mas_equalTo(0.0f);
         make.right.equalTo(self.avatarView.mas_left).offset(-15.0f);
     }];
     
     [_avatarView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.mas_equalTo(-15.0f);
-        make.top.mas_equalTo(15.0f);
-        make.bottom.mas_equalTo(-15.0f);
+        make.right.mas_equalTo(-self.contentInset.right);
+        make.top.mas_equalTo(self.contentInset.top);
+        make.bottom.mas_equalTo(-self.contentInset.bottom);
         make.width.equalTo(self.avatarView.mas_height);
     }];
     
@@ -58,9 +58,13 @@ NSString *const UIChangeAvatarCell_IDFR = @"UIChangeAvatarCell";
 #endif
 }
 
+- (UIEdgeInsets)contentInset {
+    return UIEdgeInsetsMake(15.0f, 20.0f, 15.0f, 20.0f);
+}
+
 - (void)layoutSubviews {
     [super layoutSubviews];
-    _avatarView.layer.cornerRadius = (CGRectGetHeight(self.bounds) - 30.0f) / 2.0f;
+    _avatarView.layer.cornerRadius = (CGRectGetHeight(self.bounds) - self.contentInset.top - self.contentInset.bottom) / 2.0f;
 }
 
 #pragma mark - Getter

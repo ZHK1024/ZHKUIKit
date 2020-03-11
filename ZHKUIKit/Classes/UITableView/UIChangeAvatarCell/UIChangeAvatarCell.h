@@ -15,6 +15,8 @@ extern NSString *const UIChangeAvatarCell_IDFR;
 
 @property (nonatomic, strong) UIImageView *avatarView;
 @property (nonatomic, strong) UILabel     *titleLabel;
+/// Cell 内边距
+@property (nonatomic, assign, readonly) UIEdgeInsets contentInset;
 
 - (void)didinit;
 
