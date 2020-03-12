@@ -29,8 +29,8 @@ Pod::Spec.new do |s|
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
   s.default_subspecs = 'TableView'
   s.subspec 'TableView' do |ts|
-    
-    ts.source_files = 'ZHKUIKit/Classes/TableView/**'
+
+    ts.source_files = 'ZHKUIKit/Classes/UITableView/**/**'
   end
 
   s.ios.deployment_target = '8.0'
