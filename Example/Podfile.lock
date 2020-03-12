@@ -2,6 +2,9 @@ PODS:
   - Masonry (1.1.0)
   - ZHKUIKit (0.1.3):
     - Masonry
+    - ZHKUIKit/TableView (= 0.1.3)
+  - ZHKUIKit/TableView (0.1.3):
+    - Masonry
 
 DEPENDENCIES:
   - ZHKUIKit (from `../`)
@@ -16,7 +19,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  ZHKUIKit: 9d30d081c37505ce63379fdeca8f1c85b19b1885
+  ZHKUIKit: 744056a4699900f9cafbba2c32d27d868516dc40
 
 PODFILE CHECKSUM: 73e3c152d40b99f10bae809e83123f633b18f2bc
 

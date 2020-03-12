@@ -27,10 +27,17 @@ Pod::Spec.new do |s|
   s.author           = { 'ZHK1024' => 'ZHK1024@foxmail.com' }
   s.source           = { :git => 'https://github.com/ZHK1024/ZHKUIKit.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.default_subspecs = 'TableView'
+  s.subspec 'TableView' do |ts|
+    
+    ts.source_files = 'ZHKUIKit/Classes/TableView/**'
+  end
 
   s.ios.deployment_target = '8.0'
   
-  s.source_files = 'ZHKUIKit/Classes/**/**'
+  s.source_files = 'ZHKUIKit/Classes/**'
+  
+  
   
   # s.resource_bundles = {
   #   'ZHKUIKit' => ['ZHKUIKit/Assets/*.png']
