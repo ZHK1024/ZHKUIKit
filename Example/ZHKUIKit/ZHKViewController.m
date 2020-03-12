@@ -46,7 +46,9 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:UICaptchaViewCell_IDFR];
+    UICaptchaViewCell *cell = [tableView dequeueReusableCellWithIdentifier:UICaptchaViewCell_IDFR];
+    cell.titleLabel.text = @"验证码";
+    cell.textField.placeholder = @"输入验证码";
     return cell;
 }
 

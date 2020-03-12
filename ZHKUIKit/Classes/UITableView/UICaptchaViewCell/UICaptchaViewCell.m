@@ -24,14 +24,21 @@ NSString *const UICaptchaViewCell_IDFR = @"UICaptchaViewCell";
 - (void)_setupUI {
     self.sec = 60;
     self.selectionStyle = UITableViewCellSelectionStyleNone;
+    [self.contentView addSubview:self.titleLabel];
     [self.contentView addSubview:self.textField];
     [self.contentView addSubview:self.button];
     
-    [_textField mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.contentInset.left);
         make.top.mas_equalTo(self.contentInset.top);
         make.bottom.mas_equalTo(-self.contentInset.bottom);
-        make.right.equalTo(self.button.mas_left).offset(-5.0f);
+    }];
+    
+    [_textField mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.titleLabel.mas_right).offset(10.0f);
+        make.centerY.equalTo(self.titleLabel);
+        make.right.equalTo(self.button.mas_left).offset(-10.0f);
+        make.width.mas_greaterThanOrEqualTo(100.0f);
     }];
     
     [_button mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -55,7 +62,7 @@ NSString *const UICaptchaViewCell_IDFR = @"UICaptchaViewCell";
 }
 
 - (UIColor *)disableTitleColor {
-    return [UIColor whiteColor];
+    return [UIColor grayColor];
 }
 
 - (UIColor *)enableBackgroundColor {
@@ -63,7 +70,7 @@ NSString *const UICaptchaViewCell_IDFR = @"UICaptchaViewCell";
 }
 
 - (UIColor *)disableBackgroundColor {
-    return [UIColor grayColor];
+    return [UIColor whiteColor];
 }
 
 - (CGSize)buttonSize {
@@ -71,6 +78,13 @@ NSString *const UICaptchaViewCell_IDFR = @"UICaptchaViewCell";
 }
 
 #pragma mark - Action
+
+- (UILabel *)titleLabel {
+    if (_titleLabel == nil) {
+        self.titleLabel = [UILabel new];
+    }
+    return _titleLabel;
+}
 
 - (void)buttonAction {
     if (_timer == nil) {
@@ -107,7 +121,7 @@ NSString *const UICaptchaViewCell_IDFR = @"UICaptchaViewCell";
 - (UIButton *)button {
     if (_button == nil) {
         self.button = [UIButton buttonWithType:UIButtonTypeCustom];
-        _button.titleLabel.font = [UIFont systemFontOfSize:13.0f];
+        _button.titleLabel.font = [UIFont systemFontOfSize:14.0f];
         [_button setTitle:@"获取验证码" forState:UIControlStateNormal];
         [_button setTitleColor:self.enableTitleColor forState:UIControlStateNormal];
         [_button setTitleColor:self.disableTitleColor forState:UIControlStateDisabled];

@@ -13,6 +13,7 @@ extern NSString *const UICaptchaViewCell_IDFR;
 
 @interface UICaptchaViewCell : ZHKBaseTableCell
 
+@property (nonatomic, strong) UILabel     *titleLabel;  // 标题
 @property (nonatomic, strong) UITextField *textField;
 @property (nonatomic, strong) UIButton    *button;
 //
