@@ -88,7 +88,7 @@ NSString *const UICaptchaViewCell_IDFR = @"UICaptchaViewCell";
 
 - (void)buttonAction {
     // 回调代理方法
-    if ([_delegate captchaViewSendButtonDidClicked]) {
+    if ([_delegate respondsToSelector:@selector(captchaViewSendButtonDidClicked)]) {
         [_delegate captchaViewSendButtonDidClicked];
     }
     
