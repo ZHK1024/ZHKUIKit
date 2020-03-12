@@ -24,11 +24,15 @@
     }];
     
     [_iconView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.contentInset.left);
-        make.top.equalTo(self.contentInset.top);
+        make.left.mas_equalTo(self.contentInset.left);
+        make.top.mas_equalTo(self.contentInset.top);
         make.bottom.mas_equalTo(-self.contentInset.bottom);
         make.width.equalTo(self.iconView.mas_height);
     }];
+    
+#if DEBUG
+    _iconView.backgroundColor = [UIColor orangeColor];
+#endif
 }
 
 #pragma mark - Getter
