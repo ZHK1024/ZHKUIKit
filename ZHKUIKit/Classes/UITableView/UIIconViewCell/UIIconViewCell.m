@@ -15,7 +15,7 @@
 - (void)_setupUI {
     self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     [self.contentView addSubview:self.titleLabel];
-    [self.contentView addSubview:self.titleLabel];
+    [self.contentView addSubview:self.iconView];
     
     [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.mas_equalTo(0.0f);
