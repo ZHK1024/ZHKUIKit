@@ -12,26 +12,6 @@ NSString *const UIChangeAvatarCell_IDFR = @"UIChangeAvatarCell";
 
 @implementation UIChangeAvatarCell
 
-#pragma mark - Init
-
-- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
-    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        [self _setupUI];
-        [self didinit];
-    }
-    return self;
-}
-
-- (instancetype)initWithCoder:(NSCoder *)coder {
-    if (self = [super initWithCoder:coder]) {
-        [self _setupUI];
-        [self didinit];
-    }
-    return self;
-}
-
-- (void)didinit {}
-
 #pragma mark - UI
 
 - (void)_setupUI {
@@ -56,10 +36,6 @@ NSString *const UIChangeAvatarCell_IDFR = @"UIChangeAvatarCell";
     _titleLabel.text = @"头像";
     _avatarView.backgroundColor = [UIColor orangeColor];
 #endif
-}
-
-- (UIEdgeInsets)contentInset {
-    return UIEdgeInsetsMake(15.0f, 20.0f, 15.0f, 20.0f);
 }
 
 - (void)layoutSubviews {
