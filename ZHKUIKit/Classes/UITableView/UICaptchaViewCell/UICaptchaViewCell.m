@@ -87,19 +87,30 @@ NSString *const UICaptchaViewCell_IDFR = @"UICaptchaViewCell";
 }
 
 - (void)buttonAction {
+    // 回调代理方法
+    if ([_delegate captchaViewSendButtonDidClicked]) {
+        [_delegate captchaViewSendButtonDidClicked];
+    }
+    
+}
+
+/// 开始倒计时
+- (void)countDownStart {
+    // 开始倒计时
     if (_timer == nil) {
         self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(countDown) userInfo:nil repeats:YES];
         [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
     }
 }
 
+/// 倒计时逻辑
 - (void)countDown {
-    NSLog(@"%s   %ld", __func__, self.sec);
     self.sec--;
     if (self.sec <= 0) {
         self.sec = 60;
         [self buttonEnable:YES];
         [self.button setTitle:@"重新获取" forState:UIControlStateNormal];
+        // 结束 timer 回调
         [self.timer invalidate];
         self.timer = nil;
         return;
