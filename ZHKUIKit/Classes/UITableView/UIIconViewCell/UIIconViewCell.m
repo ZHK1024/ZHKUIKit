@@ -35,6 +35,10 @@
 #endif
 }
 
+- (UIEdgeInsets)contentInset {
+    return UIEdgeInsetsMake(10, 20, 10, 20);
+}
+
 #pragma mark - Getter
 
 - (UILabel *)titleLabel {
