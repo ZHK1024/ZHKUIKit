@@ -8,6 +8,7 @@
 
 #import "ZHKViewController.h"
 #import <UIChangeAvatarCell.h>
+#import <UICaptchaViewCell.h>
 
 @interface ZHKViewController ()
 
@@ -29,7 +30,9 @@
 
 - (void)setupUI {
     self.tableView.rowHeight = 80.0f;
+    self.tableView.rowHeight = 44.0f;
     [self.tableView registerClass:[UIChangeAvatarCell class] forCellReuseIdentifier:UIChangeAvatarCell_IDFR];
+    [self.tableView registerClass:[UICaptchaViewCell class] forCellReuseIdentifier:UICaptchaViewCell_IDFR];
 }
 
 #pragma mark - UITableView dataSource
@@ -43,7 +46,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:UIChangeAvatarCell_IDFR];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:UICaptchaViewCell_IDFR];
     return cell;
 }
 

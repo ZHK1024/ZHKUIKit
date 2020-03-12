@@ -31,6 +31,7 @@
 #pragma mark - UI
 
 - (void)setupUI {
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
     [self.contentView addSubview:self.titleLabel];
     [self.contentView addSubview:self.textField];
     
