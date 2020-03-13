@@ -4,7 +4,9 @@ platform :ios, '8.0'
 
 target 'ZHKUIKit_Example' do
   pod 'ZHKUIKit', :path => '../'
-
+  pod 'ZHKUIKit/TableView', :path => '../'
+  pod 'ZHKUIKit/WebView', :path => '../'
+  
   target 'ZHKUIKit_Tests' do
     inherit! :search_paths
 
