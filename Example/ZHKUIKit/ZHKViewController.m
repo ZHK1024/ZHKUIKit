@@ -9,6 +9,8 @@
 #import "ZHKViewController.h"
 #import <UIChangeAvatarCell.h>
 #import <UICaptchaViewCell.h>
+#import <WKWebViewController.h>
+#import <WebViewLogic.h>
 
 @interface ZHKViewController ()
 
@@ -33,6 +35,17 @@
     self.tableView.rowHeight = 44.0f;
     [self.tableView registerClass:[UIChangeAvatarCell class] forCellReuseIdentifier:UIChangeAvatarCell_IDFR];
     [self.tableView registerClass:[UICaptchaViewCell class] forCellReuseIdentifier:UICaptchaViewCell_IDFR];
+    
+    self.navigationItem.rightBarButtonItem =
+    [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(rightItem)];
+}
+
+#pragma mark - Action
+
+- (void)rightItem {
+    WKWebViewController *webVC = [[WKWebViewController alloc] init];
+    webVC.logic = [WebViewLogic logicWithURLString:@"https://www.baidu.com"];
+    [self.navigationController pushViewController:webVC animated:YES];
 }
 
 #pragma mark - UITableView dataSource
