@@ -12,20 +12,6 @@
 
 #pragma mark - Init
 
-- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
-    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        [self _setupUI];
-        [self didInit];
-    }
-    return self;
-}
-
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    [self _setupUI];
-    [self didInit];
-}
-
 - (void)didInit {}
 
 #pragma mark - UI
