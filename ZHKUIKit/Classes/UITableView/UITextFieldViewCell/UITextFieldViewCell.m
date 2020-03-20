@@ -22,7 +22,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    [self setupUI];
+    [self _setupUI];
     [self didInit];
 }
 
