@@ -22,7 +22,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    [self setupUI];
+    [self _setupUI];
     [self didInit];
 }
 
@@ -30,7 +30,7 @@
 
 #pragma mark - UI
 
-- (void)setupUI {
+- (void)_setupUI {
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     [self.contentView addSubview:self.titleLabel];
     [self.contentView addSubview:self.textField];
