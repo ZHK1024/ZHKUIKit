@@ -39,6 +39,9 @@
         make.left.mas_equalTo(self.contentInset.left);
         make.top.mas_equalTo(self.contentInset.top);
         make.bottom.mas_equalTo(-self.contentInset.bottom);
+        if (self.textMinLen > 0.0f) {
+            make.width.mas_equalTo(self.textMinLen);
+        }
     }];
     
     [_textField mas_makeConstraints:^(MASConstraintMaker *make) {

@@ -21,6 +21,9 @@
         make.centerY.mas_equalTo(0.0f);
         make.left.equalTo(self.iconView.mas_right).offset(10.0f);
         make.right.mas_equalTo(-self.contentInset.right);
+        if (self.textMinLen > 0.0f) {
+            make.width.mas_equalTo(self.textMinLen);
+        }
     }];
     
     [_iconView mas_makeConstraints:^(MASConstraintMaker *make) {

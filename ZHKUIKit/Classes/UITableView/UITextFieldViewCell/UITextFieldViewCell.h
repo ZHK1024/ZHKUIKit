@@ -14,8 +14,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UILabel *titleLabel;      // 标题
 @property (nonatomic, strong) UITextField *textField;   // 输入框
 
-- (void)didInit;
-
 @end
 
 NS_ASSUME_NONNULL_END

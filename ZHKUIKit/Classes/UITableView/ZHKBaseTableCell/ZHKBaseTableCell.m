@@ -8,10 +8,11 @@
 #import "ZHKBaseTableCell.h"
 
 @implementation ZHKBaseTableCell
+
 #pragma mark - Init
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
-    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+    if (self = [super initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:reuseIdentifier]) {
         [self _setupUI];
         [self didinit];
     }
@@ -37,6 +38,14 @@
 #pragma mark - UI
 
 - (void)_setupUI {}
+
+- (UITableViewCellStyle)style {
+    return UITableViewCellStyleDefault;
+}
+
+- (CGFloat)textMinLen {
+    return 0.0f;
+}
 
 - (UIEdgeInsets)contentInset {
     return UIEdgeInsetsMake(15.0f, 20.0f, 15.0f, 20.0f);

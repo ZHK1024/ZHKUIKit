@@ -23,6 +23,9 @@ NSString *const UIChangeAvatarCell_IDFR = @"UIChangeAvatarCell";
         make.left.mas_equalTo(self.contentInset.left);
         make.centerY.mas_equalTo(0.0f);
         make.right.equalTo(self.avatarView.mas_left).offset(-15.0f);
+        if (self.textMinLen > 0.0f) {
+            make.width.mas_equalTo(self.textMinLen);
+        }
     }];
     
     [_avatarView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -42,6 +45,8 @@ NSString *const UIChangeAvatarCell_IDFR = @"UIChangeAvatarCell";
     [super layoutSubviews];
     _avatarView.layer.cornerRadius = (CGRectGetHeight(self.bounds) - self.contentInset.top - self.contentInset.bottom) / 2.0f;
 }
+
+- (void)didinit {}
 
 #pragma mark - Getter
 

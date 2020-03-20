@@ -16,8 +16,6 @@ extern NSString *const UIChangeAvatarCell_IDFR;
 @property (nonatomic, strong) UIImageView *avatarView;
 @property (nonatomic, strong) UILabel     *titleLabel;
 
-- (void)didinit;
-
 @end
 
 NS_ASSUME_NONNULL_END
