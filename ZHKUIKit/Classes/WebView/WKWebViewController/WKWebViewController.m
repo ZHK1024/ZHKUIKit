@@ -11,7 +11,7 @@
 
 @interface WKWebViewController ()
 
-@property (nonatomic, strong) WKWebView *webView;
+@property (nonatomic, strong) WKWebView *wkWebView;
 
 @end
 
@@ -37,13 +37,13 @@
 
 - (void)_setupUI {
     self.view.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:self.webView];
-    [self.webView loadRequest:[NSURLRequest requestWithURL:_logic.URL]];
+    [self.view addSubview:self.wkWebView];
+    [self.wkWebView loadRequest:[NSURLRequest requestWithURL:_logic.URL]];
 }
 
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
-    _webView.frame = self.view.bounds;
+    _wkWebView.frame = self.view.bounds;
 }
 
 #pragma mark - Setter
@@ -52,20 +52,31 @@
     if (_logic != logic) {
         _logic = logic;
         _logic.viewController = self;
-        _logic.webView = self.webView;
-        self.webView.navigationDelegate = _logic;
-        self.webView.UIDelegate = _logic;
+        _logic.webView = self.wkWebView;
+        self.wkWebView.navigationDelegate = _logic;
+        self.wkWebView.UIDelegate = _logic;
     }
+}
+
+#pragma mark - Configuration
+
+- (BOOL)scrollable {
+    return YES;
 }
 
 #pragma mark - Getter
 
 - (WKWebView *)webView {
-    if (_webView == nil) {
+    if (_wkWebView == nil) {
         WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
-        self.webView = [[WKWebView alloc] initWithFrame:self.view.bounds configuration:config];
+        self.wkWebView = [[WKWebView alloc] initWithFrame:self.view.bounds configuration:config];
+        _wkWebView.scrollView.scrollEnabled = self.scrollable;
     }
-    return _webView;
+    return _wkWebView;
+}
+
+- (WKWebView *)webView {
+    return self.wkWebView;
 }
 
 @end
