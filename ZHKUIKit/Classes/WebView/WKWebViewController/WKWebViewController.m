@@ -66,7 +66,7 @@
 
 #pragma mark - Getter
 
-- (WKWebView *)webView {
+- (WKWebView *)wkWebView {
     if (_wkWebView == nil) {
         WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
         self.wkWebView = [[WKWebView alloc] initWithFrame:self.view.bounds configuration:config];
