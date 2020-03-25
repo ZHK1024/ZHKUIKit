@@ -36,8 +36,8 @@ NSString *const UIChangeAvatarCell_IDFR = @"UIChangeAvatarCell";
     }];
     
 #if DEBUG
-    _titleLabel.text = @"头像";
-    _avatarView.backgroundColor = [UIColor orangeColor];
+//    _titleLabel.text = @"头像";
+//    _avatarView.backgroundColor = [UIColor orangeColor];
 #endif
 }
 

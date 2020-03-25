@@ -34,7 +34,7 @@
     }];
     
 #if DEBUG
-    _iconView.backgroundColor = [UIColor orangeColor];
+//    _iconView.backgroundColor = [UIColor orangeColor];
 #endif
 }
 
