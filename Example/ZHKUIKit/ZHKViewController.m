@@ -11,6 +11,7 @@
 #import <UICaptchaViewCell.h>
 #import <WKWebViewController.h>
 #import <WebViewLogic.h>
+#import <ZHKButtonTableFooterView.h>
 
 @interface ZHKViewController ()
 
@@ -33,11 +34,14 @@
 - (void)setupUI {
     self.tableView.rowHeight = 80.0f;
     self.tableView.rowHeight = 44.0f;
+    self.tableView.delaysContentTouches = NO;
     [self.tableView registerClass:[UIChangeAvatarCell class] forCellReuseIdentifier:UIChangeAvatarCell_IDFR];
     [self.tableView registerClass:[UICaptchaViewCell class] forCellReuseIdentifier:UICaptchaViewCell_IDFR];
     
     self.navigationItem.rightBarButtonItem =
     [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(rightItem)];
+    
+    self.tableView.tableFooterView = [[ZHKButtonTableFooterView alloc] init];
 }
 
 #pragma mark - Action
