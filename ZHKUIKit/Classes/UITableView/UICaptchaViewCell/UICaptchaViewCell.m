@@ -136,6 +136,7 @@ NSString *const UICaptchaViewCell_IDFR = @"UICaptchaViewCell";
     if (_button == nil) {
         self.button = [UIButton buttonWithType:UIButtonTypeCustom];
         _button.titleLabel.font = [UIFont systemFontOfSize:14.0f];
+        _button.backgroundColor = self.enableBackgroundColor;
         [_button setTitle:@"获取验证码" forState:UIControlStateNormal];
         [_button setTitleColor:self.enableTitleColor forState:UIControlStateNormal];
         [_button setTitleColor:self.disableTitleColor forState:UIControlStateDisabled];
